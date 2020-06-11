@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" type="text/css" href="count.css">
+	<title>Events count down</title>
+</head>
+
+<body>
+	
+    <form>
+<!--making input for adding the event -->	
+ 	<input type="text" id="item" placeholder="Enter your event please">
+	<input type="submit" value="add Event">
+	
+	
+
+</form><!--end the form-->
+<ul class="storag"></ul>
+<!--make button to remove all items-->
+<button>Clear data</button>
+    <!-- Create Layout -->
+    <section id="home">
+    	<!--starting the container class-->	
+     <div class="container">
+     	<!--starting the row class-->
+     	 <div class="row">
+     	 	<!--starting the col class-->
+                <div class="col">
+                	<!--starting the home-info class-->
+                    <div class="home-info">
+
+                        <h1>Enter your time  for your Event please </h1>
+                        <!--creat ul-->
+                        <ul class="coutdown">
+                            <li>
+                               <input id="days" type="number" max="120" min="0" value="0" class="time">
+                                <h3>Days</h3>
+                            </li>
+                            <li>
+                                <input id="hours" type="number" max="24" min="0" value="0" class="time">
+                                <h3>Hours</h3>
+                            </li>
+                            <li>
+                            	<input id="minutes" type="number" max="60" min="0" value="0" class="time">
+
+                                <h3>Minutes</h3>
+                            </li>
+                            <li>
+                                <input id="seconds" type="number" max="60" min="0" value="0" class="time">
+                                <h3>Seconds</h3>
+                            </li>
+                        </ul>
+                        <!--end the ul-->
+                    </div>
+                    <!--end the home-info class-->
+                </div>
+                <!--end the col class-->
+            </div>
+            <!--end the row class-->
+
+            <!--starting the counterBtn class-->
+
+            <div class="counterBtn">
+            	<!--creat the button for start and reset -->
+            <button id="startBtn" type="submit">start</button>
+             <button id="resetBtn" type="submit">reset</button>
+
+            
+            </div>
+             <!--end the counterBtn class-->
+
+
+        </div>
+         <!--end the container class-->
+
+    </section>
+ <script src="count.js"></script>
+</body>
+</html> 

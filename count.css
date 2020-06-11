@@ -1,0 +1,147 @@
+
+/* start css code */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Orbitron;
+}
+/* start css code for body*/
+body {
+    
+    background-size: cover;
+    background-position: center;
+    display: grid;
+    place-items: center;
+    min-height: 100vh;}
+
+/* start css code for form*/
+form{text-align: center;}
+/* start css code for input type of text */
+ input[type="text"]{padding: 22px;
+margin-bottom: 10px;
+background-color:#dc143c;
+color:white;
+border-radius: 10px;
+font-size: 25px;
+border: 1px solid rgba(0,0,0,.2);
+outline: none;
+-webkit-text-stroke-width: unset;
+
+    
+}
+
+/* start css code for input type of text */
+ input[type="date"]{padding: 22px;
+margin-bottom: 10px;
+background-color:#dc143c;
+color:white;
+border-radius: 10px;
+font-size: 25px;
+border: 1px solid rgba(0,0,0,.2);
+outline: none;
+-webkit-text-stroke-width: unset;
+
+    
+}
+
+/* start css code for the input type of submit*/
+ input[type="submit"]{    padding: 22px;
+    margin-bottom: 10px;
+    background-color: #dc143c;
+color:white;
+border-radius: 10px;
+font-size: 25px;
+border: 1px solid rgba(0,0,0,.2);
+outline: none;
+-webkit-text-stroke-width: unset;
+outline: none;
+    
+}
+
+/* start css code for button*/
+button{position: relative;left: 200px;  margin-bottom: 10px;
+     padding: 22px;
+    background-color: #dc143c;
+color:white;
+border-radius: 10px;
+font-size: 25px;
+border: 1px solid rgba(0,0,0,.2);
+outline: none;
+-webkit-text-stroke-width: unset;
+outline: none;
+    }
+
+/* start css code for the section of home */
+#home {
+
+    max-width: 800px;
+    min-height: 400px;
+    border: solid 10px #999;
+  background-color: #a0522d;
+    background-size: cover;
+    background-position: center;
+}
+/* start css code for h1*/
+.home-info h1 {
+    text-align: center;
+    font-size: 30px;
+   
+    border-bottom: 5px solid #999;
+    color: #fff;
+    line-height: 50px;
+   
+}
+/* start css code for contdown class*/
+.coutdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 100px;
+}
+/* start css code for li */
+.coutdown li {
+    list-style: none;
+}
+/* start css code for span*/
+.coutdown span {
+    font-size: 42px;
+    color: #fff;
+    font-weight: bolder;
+}
+/* start css code for h3*/
+.coutdown h3 {
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+}
+/* start css code for start and reset Button*/
+.counterBtn button{
+    background-color:firebrick;
+    color: white;
+   padding: 10px 20px; 
+    border: none;
+   border-radius: 5px; 
+    transition: all 1s;
+position: relative;
+    left: 280px;
+    top:10px;
+    width: 100px;
+
+}
+.counterBtn button:hover{
+   background-color: #800000; 
+} 
+/* start css code for time class */
+.time {
+    justify-self: center;
+    align-self: center;
+    color: #fff;
+
+    border: none;
+    background-color: #ffffff00;
+    font-size: 50px;
+    width: 70px;
+    height: 50px;
+}
