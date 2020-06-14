@@ -8,74 +8,67 @@
 </head>
 
 <body>
-	
-    <form>
-<!--making input for adding the event -->	
- 	<input type="text" id="item" placeholder="Enter your event please">
-	<input type="submit" value="add Event">
-	
-	
 
-</form><!--end the form-->
-<ul class="storag"></ul>
-<!--make button to remove all items-->
-<button>Clear data</button>
-    <!-- Create Layout -->
+	<!-- Create input for enter the event-->
+	 <input id="titleInput" type="text" name="title" placeholder="Enter your title please">
+	 <!-- Create input for enter the time and date-->
+
+
+        <input id="dateInput" type="datetime-local"  name="countdata" placeholder="Enter your time and date">
+        <!-- Create button for working the timer-->
+
+       <button onclick="appear();" id="enterBtn" type="submit">start</button>
+
+       <!-- Create div for enter show the data-->
+<div id="show"></div>
+
+<!-- Create Layout -->
+   <!-- start the section -->
     <section id="home">
-    	<!--starting the container class-->	
-     <div class="container">
-     	<!--starting the row class-->
-     	 <div class="row">
-     	 	<!--starting the col class-->
-                <div class="col">
-                	<!--starting the home-info class-->
-                    <div class="home-info">
+    	<!-- starting the container div -->
+        <div class="container">
+        	<!-- starting the row div -->
 
-                        <h1>Enter your time  for your Event please </h1>
-                        <!--creat ul-->
+            <div class="row">
+            	<!-- starting the col div -->
+
+                <div class="col">
+                	<!-- starting the home-info div -->
+
+                    <div class="home-info">
+                        <h1>We Are Getting Ready To Launch New CountDown !</h1>
                         <ul class="coutdown">
                             <li>
-                               <input id="days" type="number" max="120" min="0" value="0" class="time">
+                                <span class="days" id="days">00</span>
                                 <h3>Days</h3>
                             </li>
                             <li>
-                                <input id="hours" type="number" max="24" min="0" value="0" class="time">
+                                <span class="hours" id="hours">00</span>
                                 <h3>Hours</h3>
                             </li>
                             <li>
-                            	<input id="minutes" type="number" max="60" min="0" value="0" class="time">
-
+                                <span class="minutes" id="minutes">00</span>
                                 <h3>Minutes</h3>
                             </li>
                             <li>
-                                <input id="seconds" type="number" max="60" min="0" value="0" class="time">
+                                <span class="seconds" id="seconds">00</span>
                                 <h3>Seconds</h3>
                             </li>
                         </ul>
-                        <!--end the ul-->
                     </div>
-                    <!--end the home-info class-->
+                    <!-- end the home-info div -->
+
                 </div>
-                <!--end the col class-->
+                   <!-- end the col div -->
             </div>
-            <!--end the row class-->
-
-            <!--starting the counterBtn class-->
-
-            <div class="counterBtn">
-            	<!--creat the button for start and reset -->
-            <button id="startBtn" type="submit">start</button>
-             <button id="resetBtn" type="submit">reset</button>
-
-            
-            </div>
-             <!--end the counterBtn class-->
-
-
+               <!-- end the row div -->
         </div>
-         <!--end the container class-->
-
+           <!-- end the container div -->
     </section>
+       <!-- end the section -->
+
+	
+   
  <script src="count.js"></script>
 </body>
 </html> 

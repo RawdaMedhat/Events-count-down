@@ -1,127 +1,63 @@
-//js for adding the  event 
-//cash variables
+//select variables
+const title = document.getElementById('titleInput');
+ const input = document.getElementById('dateInput');
+// function for working the timer
+function appear (){
+//making alert for enter the data
+    if(title.value=="" || input.value==""){
+         alert("please enter your data please...")
+     } 
+     else {
+    //appear title and date in the show div
+
+    document.getElementById('show').style.display='block';
+
+    document.getElementById("show").innerHTML = title.value;
+
+    document.getElementById('home').style.display='block';
 
 
-const form = document.querySelector('form');
-const ul = document.querySelector('ul');
-const input = document.querySelector('#item');
-const clearButton = document.querySelector('button')
-const items =JSON.parse(localStorage.getItem('events'))?JSON.parse(localStorage.getItem('events')):[];
-const data = JSON.parse(localStorage.getItem('events'))?JSON.parse(localStorage.getItem('events')):[];
-// loop  pass on the data
-data.map( (item) => {
+    const input = document.getElementById('dateInput');
 
-    createLi(item)
-})
+//Get Date First
+const countDown = new Date(input.value).getTime();
 
 
+//Set Interval Time To Time
+const setTimeDisplay = setInterval(() => {
 
-//creat li and appened to ul 
+    //Todays Date all time
+    const nowTime = new Date().getTime();
+  
 
-function createLi(text){
-    
-    var li=document.createElement("li");
-    li.textContent=text;
-   // li.className="li";
-    ul.appendChild(li);
-    var remove = document.createElement("button");
-   remove.innerHTML="remove";
-    remove.className="remove";
-    li.appendChild(remove);
-    remove.onclick=function(){
-        remove.parentElement.remove();
-        }
-    }
-//submit form Event
-form.addEventListener('submit',function(e){
-    e.preventDefault();
+    //Distance By NowTime and Count
+    const distance = countDown - nowTime;
 
-  if (input.value == '') {
-    alert("please inter your item");
-    ul.removeChild(ul.children);}
-//add to local storage
-items.push(input.value)
-localStorage.setItem('events',JSON.stringify(items))
+    //Now Show All The Data on the screen
+    const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    document.getElementById("days").textContent  = days;
+
+    const hours = Math.floor(distance % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    document.getElementById("hours").textContent = hours;
 
 
-    //add to ul
-    createLi(input.value)
-    input.value = ''
-})
-//clear data 
-clearButton.addEventListener('click',function(){
-    localStorage.clear();
-    ul.innerHTML = '';
-})
+    const minutes = Math.floor(distance % (1000 * 60 * 60) / (1000 * 60));
+    document.getElementById("minutes").textContent = minutes;
+
+    const seconds = Math.floor(distance % (1000 * 60) / 1000);
+    document.getElementById("seconds").textContent = seconds;
+// condition for stop the timer when the event occurre 
+    if (distance< 0) {
+
+                clearInterval(setTimeDisplay);
+                alert("The event has occurred..."); 
+             //end the condition  
+            }
+//end the set interval
+}, 1000);
+//end the condition(else)
+     }
+//end the function
+      }
 
 
-//js for adding the time of event 
-//cash variables
-
-const start = document.getElementById('startBtn');
-const reset = document.getElementById('resetBtn');
-const event = document.getElementById('eventInput');
-const d = document.getElementById('days');
-const h = document.getElementById('hours');
-const m = document.getElementById('minutes');
-const s = document.getElementById('seconds');
-
-var startTimer = null;
-// A button to turn on the time
-start.addEventListener('click',function () {
-
-
-    function startInterval(){
-        startTimer = setInterval(function(){
-            timer();
-
-
-
-        },1000);
-    }
-    startInterval()
-})
-//time stop button 
-reset.addEventListener('click',function () {
-
-    d.value = 0;
-    h.value = 0;
-    m.value = 0;
-    s.value = 0;
-    stopTimer();
-
-    
-})
-
-// function for timer
-function timer(){
-    if (d.value ==0 && h.value==0 && m.value == 0 && s.value == 0 ) {
-         alert("The event has occurred...")
-
-    } else if(s.value != 0){
-        s.value--;
-    } else if(m.value != 0 && s.value == 0){
-        s.value = 59;
-        m.value--;
-    } else if(h.value != 0 && m.value == 0){
-        m.value = 60;
-        h.value--;
-    } else if(d.value != 0 && h.value == 0){
-        h.value = 24;
-        d.value--;
-    }
-
-    
-
-    return ;
-
-    }
-
-
-
-
-// function for stop timer
-
-function stopTimer(){
-    clearInterval(startTimer);
-}

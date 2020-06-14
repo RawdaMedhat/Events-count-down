@@ -15,8 +15,6 @@ body {
     place-items: center;
     min-height: 100vh;}
 
-/* start css code for form*/
-form{text-align: center;}
 /* start css code for input type of text */
  input[type="text"]{padding: 22px;
 margin-bottom: 10px;
@@ -31,22 +29,9 @@ outline: none;
     
 }
 
-/* start css code for input type of text */
- input[type="date"]{padding: 22px;
-margin-bottom: 10px;
-background-color:#dc143c;
-color:white;
-border-radius: 10px;
-font-size: 25px;
-border: 1px solid rgba(0,0,0,.2);
-outline: none;
--webkit-text-stroke-width: unset;
 
-    
-}
-
-/* start css code for the input type of submit*/
- input[type="submit"]{    padding: 22px;
+/* start css code for the input type of datetime-local */
+ input[type="datetime-local"]{    padding: 22px;
     margin-bottom: 10px;
     background-color: #dc143c;
 color:white;
@@ -71,9 +56,25 @@ outline: none;
 -webkit-text-stroke-width: unset;
 outline: none;
     }
+/* start css code for the show div */
+#show{
+     text-align: center;
+    font-size: 30px;
+        
+    background-color: #a0522d;
+   
+    border-bottom: 5px solid #999;
+    color: #fff;
+    line-height: 50px;
+    border: solid 10px #999;
+    display: none;
 
+   
+}
 /* start css code for the section of home */
 #home {
+    display: none;
+
 
     max-width: 800px;
     min-height: 400px;
@@ -115,33 +116,4 @@ outline: none;
     font-size: 28px;
     color: #fff;
     text-align: center;
-}
-/* start css code for start and reset Button*/
-.counterBtn button{
-    background-color:firebrick;
-    color: white;
-   padding: 10px 20px; 
-    border: none;
-   border-radius: 5px; 
-    transition: all 1s;
-position: relative;
-    left: 280px;
-    top:10px;
-    width: 100px;
-
-}
-.counterBtn button:hover{
-   background-color: #800000; 
-} 
-/* start css code for time class */
-.time {
-    justify-self: center;
-    align-self: center;
-    color: #fff;
-
-    border: none;
-    background-color: #ffffff00;
-    font-size: 50px;
-    width: 70px;
-    height: 50px;
 }
